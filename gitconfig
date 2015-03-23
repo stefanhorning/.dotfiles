@@ -1,0 +1,21 @@
+[user]
+  email = stefan.horning@wimdu.com
+[push]
+  default = current
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  alog = log --graph --oneline --all
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[core]
+	excludesfile = /home/stefan/.gitignore
+[credential]
+	helper = store
