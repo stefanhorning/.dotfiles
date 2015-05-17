@@ -1,4 +1,5 @@
 [user]
+  name = Stefan Horning
   email = stefan@hornings.de
 [push]
   default = current
@@ -15,7 +16,8 @@
   diff = auto
   interactive = auto
   status = auto
+  ui = true
 [core]
-	excludesfile = /home/stefan/.gitignore
+  excludesfile = ~/.gitignore_global
 [credential]
-	helper = store
+  helper = store
