@@ -37,7 +37,12 @@ set linebreak    "Wrap lines at convenient points
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
-set synmaxcol=160
+
+" Speed improvements in case of long lines:
+set synmaxcol=125 " syntax highlighting only till column 120
+set ttyfast       " u got a fast terminal
+set ttyscroll=3
+set lazyredraw    " to avoid scrolling problems
 
 set nobackup
 set noswapfile
