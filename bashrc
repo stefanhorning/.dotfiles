@@ -116,12 +116,15 @@ if ! shopt -oq posix; then
 fi
 
 
-# Show git bransh in prompt:
+# Show git branch in prompt:
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \[\1\]/'
 }
 # Example
 # PS1="\h:\W \u$BLUE\$(parse_git_branch) $DEFAULT\$ "
+
+# Set default text editor
+export EDITOR=vim
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
