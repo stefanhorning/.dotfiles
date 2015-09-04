@@ -1,20 +1,25 @@
-set nocompatible
+" Stefans vimrc
 
+" Sane defaults:
+set nocompatible
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=600                 "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
 set showmode                    "Show current mode down the bottom
-set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 set laststatus=2                "Always show the status line
+filetype plugin on
+filetype indent on
 
-set hlsearch
+" Better search:
+set hlsearch    " highlight search hits
 set ignorecase  " ignore case when searching
 set smartcase   " case sensitivity is used when search contains uppercase letters
 set incsearch   " livesearch
 
+" Proper intendation:
 set autoindent
 set smartindent
 set smarttab
@@ -23,15 +28,15 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
-" Colors
-syntax enable
+" Color sheme:
+"syntax enable "recommended everywhere but doesn't seem to change the default
 
 if ! has("gui_running")
   set t_Co=256
 endif
 "choose background=light for a different style
 set background=dark
-colors peaksea
+colors peaksea " using peaksea colorsheme in .vim/colors/
 
 " Better statusbar
 hi User1 ctermfg=black ctermbg=red
@@ -43,12 +48,8 @@ set statusline+=\ %r%h%w "flags
 set statusline+=%y " filetype
 set statusline+=\ CWD:\ %-.50{getcwd()} "cur working dir
 set statusline+=%=\L\:%l\/%L\|\C\:%c\  "Show curser pos
-"set statusline=\ %F%1*%m%*%r%h\ %w\ L:\%l\/\%L\|C:\%c
 
-filetype plugin on
-filetype indent on
-
-" Display tabs and trailing spaces visually
+" Display tabs and trailing spaces visually:
 set list listchars=tab:\ \ ,trail:•
 
 set nowrap       "Don't wrap lines
@@ -63,5 +64,6 @@ set ttyfast       " u got a fast terminal
 set ttyscroll=3
 set lazyredraw    " to avoid scrolling problems
 
+" Don't pollute working dir:
 set nobackup
 set noswapfile
