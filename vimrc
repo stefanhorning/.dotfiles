@@ -45,7 +45,6 @@ set statusline+=\ CWD:\ %-.50{getcwd()} "cur working dir
 set statusline+=%=\L\:%l\/%L\|\C\:%c\  "Show curser pos
 "set statusline=\ %F%1*%m%*%r%h\ %w\ L:\%l\/\%L\|C:\%c
 
-
 filetype plugin on
 filetype indent on
 
@@ -59,7 +58,7 @@ set sidescrolloff=15
 set sidescroll=1
 
 " Speed improvements in case of long lines:
-set synmaxcol=125 " syntax highlighting only till column 120
+set synmaxcol=160 " syntax highlighting only till column 160
 set ttyfast       " u got a fast terminal
 set ttyscroll=3
 set lazyredraw    " to avoid scrolling problems
