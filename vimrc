@@ -8,15 +8,12 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
+set laststatus=2                "Always show the status line
 
 set hlsearch
-
-"set guioptions=aegimrLt
-
-"set hidden
-"set background=dark
-"syntax enable
-"colorscheme aldmeris
+set ignorecase  " ignore case when searching
+set smartcase   " case sensitivity is used when search contains uppercase letters
+set incsearch   " livesearch
 
 set autoindent
 set smartindent
@@ -25,6 +22,29 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
+
+" Colors
+syntax enable
+
+if ! has("gui_running")
+  set t_Co=256
+endif
+"choose background=light for a different style
+set background=dark
+colors peaksea
+
+" Better statusbar
+hi User1 ctermfg=black ctermbg=red
+set statusline=
+set statusline=\ [%n]
+set statusline+=\ %f    "filepath
+set statusline+=%1*%m%* "file modification indicator in red
+set statusline+=\ %r%h%w "flags
+set statusline+=%y " filetype
+set statusline+=\ CWD:\ %-.50{getcwd()} "cur working dir
+set statusline+=%=\L\:%l\/%L\|\C\:%c\  "Show curser pos
+"set statusline=\ %F%1*%m%*%r%h\ %w\ L:\%l\/\%L\|C:\%c
+
 
 filetype plugin on
 filetype indent on
