@@ -46,8 +46,8 @@ set statusline+=\ %f    "filepath
 set statusline+=%1*%m%* "file modification indicator in red
 set statusline+=\ %r%h%w "flags
 set statusline+=%y " filetype
-set statusline+=\ CWD:\ %-.50{getcwd()} "cur working dir
-set statusline+=%=\L\:%l\/%L\|\C\:%c\  "Show curser pos
+set statusline+=%<\ CWD:\ %{getcwd()} "cur working dir
+set statusline+=%=\ L\:%l\/%L\|\C\:%c\  "Show curser pos
 
 " Display tabs and trailing spaces visually:
 set list listchars=tab:\ \ ,trail:•
