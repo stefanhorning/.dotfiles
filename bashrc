@@ -132,3 +132,8 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+### set a Go path and include bins in there
+export GOPATH="$HOME/.gocode"
+export PATH="$GOPATH/bin:$PATH"
+
