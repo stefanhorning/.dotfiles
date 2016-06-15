@@ -21,3 +21,5 @@
   excludesfile = ~/.gitignore_global
 [credential]
   helper = store
+[diff]
+	compactionHeuristic = true
