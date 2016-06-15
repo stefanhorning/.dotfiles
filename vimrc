@@ -19,7 +19,7 @@ set ignorecase  " ignore case when searching
 set smartcase   " case sensitivity is used when search contains uppercase letters
 set incsearch   " livesearch
 
-" Proper intendation:
+" Proper indentation:
 set autoindent
 set smartindent
 set smarttab
