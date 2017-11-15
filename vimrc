@@ -75,4 +75,6 @@ set noswapfile
 call plug#begin('~/.vim/plugged')
 
 " List of plugins to install with PlugInstall (pattern: github_user/repo)
-Plug 'elixir-editors/vim-elixir'
+Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
+
+call plug#end()
