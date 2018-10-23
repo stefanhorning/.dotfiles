@@ -79,7 +79,9 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
+    ### Set global grep options through aliases
     alias grep='grep --color=auto'
+    alias grepr='grep -rI --exclude-dir=.git/ --exclude-dir=log/'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
@@ -93,6 +95,7 @@ alias xchat='LANGUAGE=de:en xchat'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
+
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
@@ -126,6 +129,7 @@ function parse_git_branch {
 # Set default text editor
 export EDITOR=vim
 
+# Adding ruby stuff to the path
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
@@ -137,3 +141,26 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export GOPATH="$HOME/.gocode"
 export PATH="$GOPATH/bin:$PATH"
 
+### find bins of locally (as in per user) installed npm packages
+export PATH="$HOME/node_modules/.bin/:$PATH"
+
+# Alias to make nodejs scripts work that use the node command:
+alias node='nodejs'
+
+# Alias gist to gist-share command as linux keeps gist free for a yorick lang command
+alias gist="gist-paste"
+
+# Mediapeers cd shortcuts
+alias cdmi="cd $HOME/mediapeers/mpx-infrastructure"
+alias cdmd="cd $HOME/mediapeers/mpx-devbox"
+alias cdmp="cd $HOME/mediapeers/mpx-devbox/projects"
+alias cdmv="cd $HOME/mediapeers/vod-infrastructure"
+
+# Typo fixes
+alias gitst="git st"
+
+# ??
+eval "$(direnv hook bash)"
+
+# added by travis gem
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh

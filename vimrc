@@ -59,7 +59,7 @@ set sidescrolloff=15
 set sidescroll=1
 
 " Speed improvements in case of long lines:
-set synmaxcol=160 " syntax highlighting only till column 160
+set synmaxcol=240 " syntax highlighting only till column 240
 set ttyfast       " u got a fast terminal
 set ttyscroll=3
 set lazyredraw    " to avoid scrolling problems
