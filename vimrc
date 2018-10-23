@@ -67,3 +67,14 @@ set lazyredraw    " to avoid scrolling problems
 " Don't pollute working dir:
 set nobackup
 set noswapfile
+
+" Plugins with vim-plug
+" docs https://github.com/junegunn/vim-plug
+
+" Specify a directory for plugins
+call plug#begin('~/.vim/plugged')
+
+" List of plugins to install with PlugInstall (pattern: github_user/repo)
+Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
+
+call plug#end()
