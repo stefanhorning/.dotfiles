@@ -76,5 +76,6 @@ call plug#begin('~/.vim/plugged')
 
 " List of plugins to install with PlugInstall (pattern: github_user/repo)
 Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()

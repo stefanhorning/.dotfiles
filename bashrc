@@ -81,7 +81,7 @@ if [ -x /usr/bin/dircolors ]; then
 
     ### Set global grep options through aliases
     alias grep='grep --color=auto'
-    alias grepr='grep -rI --exclude-dir=.git/ --exclude-dir=log/'
+    alias grepr='grep -rI --exclude-dir=.git/ --exclude-dir=log/ --exclude-dir=node_modules/ --exclude-dir=coverage/ --exclude-dir=.vagrant/'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
@@ -159,8 +159,3 @@ alias cdmv="cd $HOME/mediapeers/vod-infrastructure"
 # Typo fixes
 alias gitst="git st"
 
-# ??
-eval "$(direnv hook bash)"
-
-# added by travis gem
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
