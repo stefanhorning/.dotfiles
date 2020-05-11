@@ -81,7 +81,7 @@ if [ -x /usr/bin/dircolors ]; then
 
     ### Set global grep options through aliases
     alias grep='grep --color=auto'
-    alias grepr='grep -rI --exclude-dir=.git/ --exclude-dir=log/ --exclude-dir=node_modules/ --exclude-dir=coverage/ --exclude-dir=.vagrant/'
+    alias grepr='grep -rI --exclude-dir=.git/ --exclude-dir=log/ --exclude-dir=node_modules/ --exclude-dir=coverage/ --exclude-dir=doc/ --exclude-dir=.vagrant/'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
@@ -134,15 +134,8 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-### set a Go path and include bins in there
-export GOPATH="$HOME/.gocode"
-export PATH="$GOPATH/bin:$PATH"
-
-### find bins of locally (as in per user) installed npm packages
-export PATH="$HOME/node_modules/.bin/:$PATH"
+# Adding Go bins to the path
+export PATH="$HOME/go/bin:$PATH"
 
 # Alias to make nodejs scripts work that use the node command:
 alias node='nodejs'
