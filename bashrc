@@ -134,21 +134,35 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
+# Adding ~/.local/bin to PATH, used by python pip packages for example
+export PATH="$HOME/.local/bin:$PATH"
+
 # Adding Go bins to the path
 export PATH="$HOME/go/bin:$PATH"
-
-# Alias to make nodejs scripts work that use the node command:
-alias node='nodejs'
 
 # Alias gist to gist-share command as linux keeps gist free for a yorick lang command
 alias gist="gist-paste"
 
 # Mediapeers cd shortcuts
-alias cdmi="cd $HOME/mediapeers/mpx-infrastructure"
+alias cdmi="cd $HOME/mediapeers/be-infrastructure"
 alias cdmd="cd $HOME/mediapeers/mpx-devbox"
 alias cdmp="cd $HOME/mediapeers/mpx-devbox/projects"
 alias cdmv="cd $HOME/mediapeers/vod-infrastructure"
+alias cdmf="cd $HOME/mediapeers/fe-infrastructure"
 
 # Typo fixes
 alias gitst="git st"
 
+alias password-gen="pwgen -sB 100 1"
+
+# Direnv loading
+eval "$(direnv hook bash)"
+
+
+# Alias to make nodejs scripts work that use the node command:
+alias nodejs='node'
+
+# Setup node version manager (NVM)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
