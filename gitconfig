@@ -38,3 +38,5 @@
   whitespace = red reverse
 [diff-so-fancy]
   first-run = false
+[pull]
+	rebase = false

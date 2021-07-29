@@ -138,17 +138,22 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 # Adding Go bins to the path
-export PATH="$HOME/go/bin:$PATH"
+#export PATH="$HOME/go/bin:$PATH"
+
+# Adding ~/bin to the path for custom executables
+export PATH="$HOME/bin:$PATH"
 
 # Alias gist to gist-share command as linux keeps gist free for a yorick lang command
 alias gist="gist-paste"
 
 # Mediapeers cd shortcuts
-alias cdmi="cd $HOME/mediapeers/be-infrastructure"
-alias cdmd="cd $HOME/mediapeers/mpx-devbox"
-alias cdmp="cd $HOME/mediapeers/mpx-devbox/projects"
-alias cdmv="cd $HOME/mediapeers/vod-infrastructure"
-alias cdmf="cd $HOME/mediapeers/fe-infrastructure"
+MEDIAFELLOWS_REPO_DIR="$HOME/github/mediafellows"
+
+alias cdmi="cd $MEDIAFELLOWS_REPO_DIR/be-infrastructure"
+alias cdmd="cd $MEDIAFELLOWS_REPO_DIR/mpx-devbox"
+alias cdmp="cd $MEDIAFELLOWS_REPO_DIR/mpx-devbox/projects"
+alias cdmv="cd $MEDIAFELLOWS_REPO_DIR/vod-infrastructure"
+alias cdmf="cd $MEDIAFELLOWS_REPO_DIR/fe-infrastructure"
 
 # Typo fixes
 alias gitst="git st"
