@@ -3,10 +3,10 @@
 # for examples
 
 # If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+#case $- in
+#    *i*) ;;
+#      *) return;;
+#esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -129,16 +129,11 @@ function parse_git_branch {
 # Set default text editor
 export EDITOR=vim
 
-# Adding ruby stuff to the path
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-
 # Adding ~/.local/bin to PATH, used by python pip packages for example
 export PATH="$HOME/.local/bin:$PATH"
 
 # Adding Go bins to the path
-#export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 
 # Adding ~/bin to the path for custom executables
 export PATH="$HOME/bin:$PATH"
@@ -149,11 +144,13 @@ alias gist="gist-paste"
 # Mediapeers cd shortcuts
 MEDIAFELLOWS_REPO_DIR="$HOME/github/mediafellows"
 
+alias cdm="cd $MEDIAFELLOWS_REPO_DIR"
 alias cdmi="cd $MEDIAFELLOWS_REPO_DIR/be-infrastructure"
 alias cdmd="cd $MEDIAFELLOWS_REPO_DIR/mpx-devbox"
-alias cdmp="cd $MEDIAFELLOWS_REPO_DIR/mpx-devbox/projects"
+#alias cdmp="cd $MEDIAFELLOWS_REPO_DIR/mpx-devbox/projects"
 alias cdmv="cd $MEDIAFELLOWS_REPO_DIR/vod-infrastructure"
 alias cdmf="cd $MEDIAFELLOWS_REPO_DIR/fe-infrastructure"
+#alias cdan="cd $HOME/github/ansible-collections/community.aws"
 
 # Typo fixes
 alias gitst="git st"
@@ -167,7 +164,6 @@ eval "$(direnv hook bash)"
 # Alias to make nodejs scripts work that use the node command:
 alias nodejs='node'
 
-# Setup node version manager (NVM)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# ASDF setup, see https://asdf-vm.com/guide/getting-started.htm
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
