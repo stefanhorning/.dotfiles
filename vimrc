@@ -58,11 +58,14 @@ set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
+" disable mouse in vim window
+set mouse=
+
 " Speed improvements in case of long lines:
-set synmaxcol=240 " syntax highlighting only till column 240
-set ttyfast       " u got a fast terminal
+" set synmaxcol=240 " syntax highlighting only till column 240
+" set ttyfast       " u got a fast terminal
 " set ttyscroll=3
-set lazyredraw    " to avoid scrolling problems
+" set lazyredraw    " to avoid scrolling problems
 
 " Don't pollute working dir:
 set nobackup
